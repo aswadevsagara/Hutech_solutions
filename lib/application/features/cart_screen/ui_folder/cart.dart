@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../../core/constants/colors.dart';
 
 class ScreenCart extends StatefulWidget {
@@ -45,7 +44,7 @@ class _ScreenCartState extends State<ScreenCart> {
           )
         ],
       ),
-      body: Center(
+      body:const Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/const value/const_image_url.dart';
@@ -29,14 +30,12 @@ class BottomProductView extends StatelessWidget {
                     child: Container(
                       height: 150,
                       width: 180,
-                      margin:
-                          const EdgeInsets.only(left: 20),
+                      margin: const EdgeInsets.only(left: 20),
                       color: Colors.green.withOpacity(.4),
                       child: Container(
-                          margin:
-                              const EdgeInsets.all(25),
-                          child: Image.network(
-                            url[index],
+                          margin: const EdgeInsets.all(25),
+                          child: CachedNetworkImage(
+                            imageUrl: url[index],
                             fit: BoxFit.fill,
                           )),
                     ),
@@ -62,8 +61,7 @@ class BottomProductView extends StatelessWidget {
                     height: 15,
                     width: 80,
                     color: Colors.green.withOpacity(.4),
-                    child: const FittedBox(
-                        child: Text("data")),
+                    child: const FittedBox(child: Text("data")),
                   ),
                 ),
               ),
@@ -71,11 +69,9 @@ class BottomProductView extends StatelessWidget {
                 bottom: 55,
                 right: 20,
                 child: ClipRRect(
-                  borderRadius: const BorderRadius.all(
-                      Radius.circular(3)),
+                  borderRadius: const BorderRadius.all(Radius.circular(3)),
                   child: Container(
-                    color: const Color.fromARGB(
-                        255, 7, 128, 11),
+                    color: const Color.fromARGB(255, 7, 128, 11),
                     width: 20,
                     height: 20,
                     child: const Center(

@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ec_app/application/core/constants/colors.dart';
 import 'package:ec_app/application/core/const%20value/const_image_url.dart';
 import 'package:ec_app/application/features/details/ui/products_screen.dart';
@@ -28,7 +29,7 @@ class _ScreenHomeState extends State<ScreenHome> {
     final imageProviderr = Provider.of<HomeScreenPvdr>(context);
     return Scaffold(
       appBar: AppBar(
-         automaticallyImplyLeading: false,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         toolbarHeight: 50,
@@ -121,12 +122,12 @@ class _ScreenHomeState extends State<ScreenHome> {
                             child: Container(
                               height: 150,
                               width: 180,
-                              color:
-                                  Colors.primaries[next(0, 17)].withOpacity(.12),
+                              color: Colors.primaries[next(0, 17)]
+                                  .withOpacity(.12),
                               child: Container(
                                   margin: const EdgeInsets.all(25),
-                                  child: Image.network(
-                                    homescndata[index].image,
+                                  child: CachedNetworkImage(
+                                   imageUrl:  homescndata[index].image,
                                     fit: BoxFit.fill,
                                   )),
                             ),

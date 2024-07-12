@@ -93,9 +93,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
+                           Text(
                             "Dr. Rachel Green",
-                            style: TextStyle(
+                            style: GoogleFonts.roboto(
                                 fontSize: 22, fontWeight: FontWeight.w400),
                           ),
                           const SizedBox(
@@ -115,10 +115,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   //   edit fuction
                                 }
                               },
-                              child: const Text(
+                              child:  Text(
                                 "Edit Details",
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.bold),
+                                style: GoogleFonts.roboto(
+                          fontSize: 13, fontWeight: FontWeight.bold),
                               ),
                             )),
                           )
